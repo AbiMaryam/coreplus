@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CorePlus — Privacy Policy</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --navy: #212c5f;
+        --navy-deep: #161d3f;
+        --gold: #ffc91b;
+        --amber: #ffd54a;
+        --bg: #fafafa;
+        --surface: #ffffff;
+        --body: #5f6265;
+        --muted: #6b7294;
+        --line: rgba(33, 44, 95, 0.08);
+        --green: #28a745;
+        --red: #eb5757;
+        --radius: 10px;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.6;
+        color: var(--body);
+        background: var(--bg);
+      }
+      .header {
+        background: var(--navy);
+        color: #fff;
+        padding: 32px 20px;
+        text-align: center;
+      }
+      .header h1 {
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        margin-bottom: 4px;
+      }
+      .header .tagline {
+        font-size: 12px;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--amber);
+      }
+      .header .updated {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 12px;
+      }
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 32px 20px 64px;
+      }
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--navy);
+        margin: 32px 0 12px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid var(--amber);
+      }
+      h3 {
+        font-size: 15px;
+        font-weight: 700;
+        color: var(--navy);
+        margin: 20px 0 8px;
+      }
+      p {
+        margin-bottom: 12px;
+      }
+      ul {
+        margin: 8px 0 16px 20px;
+      }
+      li {
+        margin-bottom: 6px;
+      }
+      strong {
+        color: var(--navy);
+        font-weight: 700;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 20px;
+        margin: 16px 0;
+      }
+      .alert {
+        background: rgba(255, 213, 74, 0.08);
+        border: 1px solid rgba(255, 213, 74, 0.3);
+        border-radius: var(--radius);
+        padding: 16px 20px;
+        margin: 24px 0;
+        font-size: 14px;
+        color: var(--navy);
+      }
+      .alert strong {
+        color: var(--navy-deep);
+      }
+      code {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--navy);
+        background: rgba(33, 44, 95, 0.05);
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+      .footer {
+        text-align: center;
+        padding: 24px 20px;
+        font-size: 13px;
+        color: var(--muted);
+        border-top: 1px solid var(--line);
+      }
+      a {
+        color: var(--navy);
+        font-weight: 600;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>CorePlus</h1>
+      <div class="tagline">Privacy Policy</div>
+      <div class="updated">Last updated: June 25, 2026</div>
+    </div>
+
+    <div class="container">
+      <h2>Overview</h2>
+      <p>
+        CorePlus is a browser extension that extends the Coretax portal (<code>coretaxdjp.pajak.go.id</code>) with
+        multi-period filtering, bulk-crediting, and batch PDF download features. This privacy policy explains what data we
+        collect, how we use it, and your rights.
+      </p>
+
+      <h2>Data We Collect</h2>
+
+      <h3>License codes</h3>
+      <p>
+        When you purchase a Pro subscription, we generate a unique license code (e.g. <code>CP-XXXXX-XXXXX-XXXXX</code>)
+        and store it in our Supabase database. This code is linked to your payment transaction ID and subscription details
+        (plan, start date, expiry date).
+      </p>
+
+      <h3>Payment metadata</h3>
+      <p>When you pay via QRIS through AutoGoPay, we receive and store:</p>
+      <ul>
+        <li>AutoGoPay transaction ID and order ID</li>
+        <li>Payment amount (IDR)</li>
+        <li>Payment status (pending, settlement, expired)</li>
+        <li>Plan type (monthly or annual)</li>
+      </ul>
+      <p>
+        We do <strong>not</strong> receive or store your full name, bank account details, QRIS app credentials, or any
+        financial account numbers. Payment processing is handled entirely by AutoGoPay and your QRIS payment provider
+        (GoPay, OVO, Dana, ShopeePay, etc.).
+      </p>
+
+      <h3>Data stored locally on your device</h3>
+      <p>
+        The following data is stored in your browser's <code>chrome.storage.local</code> and never leaves your device
+        except for license verification:
+      </p>
+      <ul>
+        <li><strong>CorePlus enabled/disabled toggle state</strong> (boolean)</li>
+        <li><strong>License code</strong> (the code you entered or received after payment)</li>
+        <li><strong>Cached license verdict</strong> (active/inactive status with expiry date)</li>
+        <li><strong>Pending transaction ID</strong> (only during an active payment flow, cleared after)</li>
+      </ul>
+
+      <h3>Data processed in-browser on the Coretax portal</h3>
+      <p>
+        CorePlus intercepts and processes e-Faktur invoice data (invoice numbers, period codes, credit statuses) entirely
+        within your browser to provide its filtering, bulk-crediting, and bulk PDF download features. This data is:
+      </p>
+      <ul>
+        <li>Never sent to our servers</li>
+        <li>Never transmitted to any third party</li>
+        <li>Never stored outside your browser session</li>
+        <li>Processed only to perform the features you explicitly request</li>
+      </ul>
+
+      <h2>Data We Do NOT Collect</h2>
+      <ul>
+        <li>No email addresses or passwords (no account system)</li>
+        <li>No personal identification information</li>
+        <li>No browsing history</li>
+        <li>No Coretax login credentials (we capture auth headers only for same-origin API requests within the portal, never transmit them elsewhere)</li>
+        <li>No financial account numbers or card details</li>
+        <li>No tracking or analytics</li>
+        <li>No advertising identifiers</li>
+      </ul>
+
+      <h2>How We Use Your Data</h2>
+      <ul>
+        <li><strong>License codes:</strong> To verify your Pro subscription status and grant access to premium features</li>
+        <li><strong>Payment metadata:</strong> To link QRIS payments to license codes and manage subscription expiry</li>
+        <li><strong>Local storage:</strong> To remember your toggle preference and license status between browser sessions (with a 7-day offline grace window)</li>
+      </ul>
+
+      <h2>Data Sharing</h2>
+      <p>We do not sell, rent, or share your data with any third party. Data is processed only through:</p>
+      <ul>
+        <li><strong>Supabase</strong> (database hosting, Edge Functions) — license and payment metadata storage</li>
+        <li><strong>AutoGoPay</strong> (payment gateway) — QRIS transaction processing</li>
+      </ul>
+      <p>Both services are bound by their own privacy and security policies.</p>
+
+      <h2>Data Retention</h2>
+      <ul>
+        <li><strong>Active licenses:</strong> Retained for the duration of your subscription plus audit purposes</li>
+        <li><strong>Expired licenses:</strong> The license code is nullified (can no longer be used) but the row is retained for audit and recovery purposes</li>
+        <li><strong>Local storage:</strong> Cleared when you click "Hapus Kode" in the popup or uninstall the extension</li>
+      </ul>
+
+      <h2>Your Rights</h2>
+      <ul>
+        <li><strong>Access:</strong> You can view your license status anytime in the CorePlus popup</li>
+        <li><strong>Deletion:</strong> Click "Hapus Kode dari Perangkat Ini" to remove your code from this device. Contact support to request server-side deletion.</li>
+        <li><strong>Recovery:</strong> If you lose your code, you can recover access using your AutoGoPay transaction ID (shown on your payment receipt)</li>
+      </ul>
+
+      <h2>Children's Privacy</h2>
+      <p>
+        CorePlus is a professional tax tool intended for tax professionals and finance teams in Indonesia. It is not
+        directed at children under 18 and we do not knowingly collect data from children.
+      </p>
+
+      <h2>Security</h2>
+      <ul>
+        <li>All communication with Supabase uses HTTPS/TLS</li>
+        <li>The Supabase anon key bundled in the extension is protected by Row Level Security (RLS) — no direct table access is possible from the client</li>
+        <li>The service role key and AutoGoPay API key are stored only in Supabase project secrets and never appear in the extension</li>
+        <li>Webhook signatures are verified using HMAC-SHA256</li>
+      </ul>
+
+      <h2>Changes to This Policy</h2>
+      <p>We may update this privacy policy from time to time. Changes will be posted on this page with an updated date.</p>
+
+      <h2>Contact</h2>
+      <p>For privacy questions or data requests, please contact:</p>
+      <ul>
+        <li>GitHub: [your GitHub repo URL]</li>
+        <li>Email: [your support email]</li>
+      </ul>
+
+      <div class="alert">
+        <strong>Disclaimer:</strong> CorePlus is not affiliated with, endorsed by, or officially connected to the
+        Direktorat Jenderal Pajak (DJP) or any government agency. "Coretax" and "e-Faktur" are trademarks of their
+        respective owners. CorePlus is an independent tool that enhances the existing Coretax portal interface.
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 CorePlus. All rights reserved.</p>
+    </div>
+  </body>
+</html>

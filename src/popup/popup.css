@@ -1,0 +1,463 @@
+/* CorePlus — popup styles
+   Based on DESIGN.md tokens: navy anchor, gold signal, amber accent. */
+
+:root {
+  --navy: #212c5f;
+  --navy-deep: #161d3f;
+  --navy-soft: #1c254f;
+  --gold: #ffc91b;
+  --gold-light: #ffd241;
+  --amber: #ffd54a;
+  --amber-border: #e0b828;
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --body: #5f6265;
+  --muted: #6b7294;
+  --line: rgba(33, 44, 95, 0.08);
+  --green: #28a745;
+  --red: #eb5757;
+  --blue: #39a9ea;
+  --radius-sm: 4px;
+  --radius-md: 10px;
+  --radius-lg: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  color: var(--body);
+  background: var(--bg);
+  width: 360px;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* --- Master Toggle Bar --- */
+.toggle-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: var(--navy);
+  color: #fff;
+}
+
+.toggle-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toggle-label {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #fff;
+}
+
+.toggle-status {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* --- Switch component --- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-track {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  transition: 0.2s;
+}
+
+.switch-track::before {
+  content: "";
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.switch input:checked + .switch-track {
+  background: var(--amber);
+}
+
+.switch input:checked + .switch-track::before {
+  transform: translateX(20px);
+  background: var(--navy);
+}
+
+.switch input:focus-visible + .switch-track {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* --- Badge --- */
+.badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+}
+
+.badge-free {
+  background: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.badge-pro {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.badge-expired {
+  background: rgba(235, 87, 87, 0.2);
+  color: #ffb4b4;
+}
+
+/* --- Main content --- */
+#content {
+  flex: 1;
+  padding: 20px;
+}
+
+/* --- Card --- */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.card h2 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+}
+
+.card p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--body);
+}
+
+/* --- Form --- */
+.form-group {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 6px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  letter-spacing: 0.02em;
+  color: var(--navy);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+input[type="text"]:focus {
+  border-color: var(--amber);
+  box-shadow: 0 0 4px rgba(255, 213, 74, 0.5);
+}
+
+input[type="text"]::placeholder {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+/* --- Buttons --- */
+.btn {
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: var(--navy);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--navy-deep);
+}
+
+.btn-accent {
+  background: var(--amber);
+  color: #212529;
+  border: 1px solid var(--amber-border);
+}
+
+.btn-accent:hover {
+  background: var(--gold-light);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--line);
+}
+
+.btn-ghost:hover {
+  background: var(--bg);
+  color: var(--body);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* --- Status display --- */
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.status-row:last-child {
+  border-bottom: none;
+}
+
+.status-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.status-value {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.status-value.green {
+  color: var(--green);
+}
+
+.status-value.red {
+  color: var(--red);
+}
+
+/* --- Alert / message --- */
+.alert {
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.alert-error {
+  background: rgba(235, 87, 87, 0.08);
+  color: var(--red);
+  border: 1px solid rgba(235, 87, 87, 0.2);
+}
+
+.alert-info {
+  background: rgba(57, 169, 234, 0.08);
+  color: #0066a8;
+  border: 1px solid rgba(57, 169, 234, 0.2);
+}
+
+.alert-success {
+  background: rgba(40, 167, 69, 0.08);
+  color: var(--green);
+  border: 1px solid rgba(40, 167, 69, 0.2);
+}
+
+/* --- Plan cards (for Phase 3 billing) --- */
+.plan-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.15s;
+}
+
+.plan-card:hover {
+  border-color: var(--amber);
+}
+
+.plan-card .plan-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.plan-card .plan-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--navy);
+}
+
+.plan-card .plan-price .period {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+/* --- Spinner --- */
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+.spinner-dark {
+  border-color: rgba(33, 44, 95, 0.2);
+  border-top-color: var(--navy);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* --- Divider --- */
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: 14px 0;
+}
+
+/* --- Section title --- */
+.section-title {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 10px;
+}
+
+/* --- Footer --- */
+.footer {
+  padding: 10px 20px 14px;
+}
+
+.disclaimer {
+  font-size: 10px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* --- Phase 3: Billing flow styles --- */
+
+.code-display {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: var(--navy);
+  background: var(--bg);
+  border: 2px solid var(--amber);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  text-align: center;
+  user-select: all;
+  cursor: pointer;
+  word-break: break-all;
+}
+
+.code-display:hover {
+  border-color: var(--gold);
+  background: rgba(255, 213, 74, 0.05);
+}
+
+.pending-info {
+  padding: 16px 0;
+  text-align: center;
+}
+
+.pending-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--navy);
+}
