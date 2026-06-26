@@ -96,36 +96,10 @@ Required to call Supabase Edge Functions for license verification (checking if a
 ## 8. Privacy Policy URL
 
 ```
-https://YOUR-GITHUB-USERNAME.github.io/coreplus/privacy.html
+https://abimaryam.github.io/coreplus/privacy.html
 ```
 
-### How to host this on GitHub Pages (free, ~5 minutes)
-
-1. **Create a GitHub account** at https://github.com (if you don't have one)
-2. **Create a new repository** named `coreplus` (or any name you prefer)
-3. **Push the extension code** to the repo:
-   ```bash
-   git init
-   git add .
-   git commit -m "CorePlus v3.0"
-   git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/coreplus.git
-   git push -u origin main
-   ```
-4. **Enable GitHub Pages**:
-   - Go to the repo on GitHub → **Settings** → **Pages** (left sidebar)
-   - Under **Build and deployment** → **Source**: select **Deploy from a branch**
-   - Under **Branch**: select `main` and `/docs` folder
-   - Click **Save**
-5. **Wait ~1 minute** for GitHub to build the page
-6. **Your privacy policy URL** is now live at:
-   ```
-   https://YOUR-USERNAME.github.io/coreplus/privacy.html
-   ```
-7. **Test it** — open the URL in your browser. You should see a styled navy/gold page with the full privacy policy.
-8. **Paste the URL** into the CWS dashboard "Privacy Policy" field and replace `YOUR-GITHUB-USERNAME` in `STORE_LISTING.md` above with your actual username.
-
-> **Note:** The styled HTML is already at `docs/privacy.html` in this repo — no need to create it. GitHub Pages serves it automatically from the `/docs` folder.
+✅ Live and verified (HTTP 200). This URL goes in the CWS dashboard "Privacy Policy" field.
 
 ## 9. Screenshots (1280×800 or 640×400)
 
@@ -196,8 +170,8 @@ CorePlus is a productivity extension for Indonesian tax professionals using the 
 ## 13. Developer Information
 
 - **Developer name**: [Your name or company]
-- **Website**: [Your website or GitHub profile]
-- **Support email**: [Your support email]
-- **Privacy policy URL**: [GitHub Pages URL after hosting]
+- **Website**: https://github.com/AbiMaryam
+- **Support email**: [Your support email — fill in before submitting]
+- **Privacy policy URL**: https://abimaryam.github.io/coreplus/privacy.html
 
 Fill these in the CWS dashboard when submitting.

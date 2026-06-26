@@ -3,6 +3,7 @@
 **Toolkit untuk Coretax** — Extends the Coretax e-Faktur portal with multi-period filtering and bulk-crediting features.
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Pending%20Review-blue)](https://chrome.google.com/webstore)
+[![Privacy Policy](https://img.shields.io/badge/Privacy%20Policy-Live-green)](https://abimaryam.github.io/coreplus/privacy.html)
 
 ## Features
 
