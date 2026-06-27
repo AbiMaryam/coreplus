@@ -123,8 +123,8 @@ on this page with an updated date.
 ## Contact
 
 For privacy questions or data requests, please contact:
-- GitHub: [your GitHub repo URL]
-- Email: [your support email]
+- GitHub: https://github.com/AbiMaryam/coreplus
+- Email: eastaxconsulting@gmail.com
 
 ## Disclaimer
 

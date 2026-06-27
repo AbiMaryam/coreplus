@@ -101,27 +101,18 @@ https://abimaryam.github.io/coreplus/privacy.html
 
 ✅ Live and verified (HTTP 200). This URL goes in the CWS dashboard "Privacy Policy" field.
 
-## 9. Screenshots (1280×800 or 640×400)
+## 9. Screenshots (1280×800)
 
-Prepare 3–5 screenshots. Recommended:
+All 6 screenshots are in the `screenshot/` folder, sized 1280×800 (CWS compatible). Upload all 6 to the CWS dashboard:
 
-1. **Multi-period picker open** — Show the toolkit UI injected into the Coretax action bar with the period checkbox grid expanded. Highlight the ability to select more than 2 periods.
-
-2. **FP filter in action** — Show the FP filter panel with a list of invoice numbers pasted, and the grid filtered to show only matching invoices.
-
-3. **Bulk credit operation** — Show the bulk action controls (year, status, period selects + "Ubah Masa Kredit" button) with the progress message "Proses: 45/120 (40 Sukses, 5 Gagal)".
-
-4. **Bulk PDF download** — Show the bulk download button (navy square with down-arrow icon) and a progress message like "Mengunduh PDF..." or "Proses: 30/80 (28 Sukses, 2 Gagal)" with downloaded PDF files visible in the browser's download bar.
-
-5. **Popup — Free tier** — Show the CorePlus popup with the toggle ON, "CorePlus Free" card, code entry field, and the two QRIS plan cards (Bulanan Rp 20.000 / Tahunan Rp 100.000).
-
-6. **Popup — Pro active** — Show the popup with "CorePlus Pro Aktif" card displaying plan, start date, expiry date, and days remaining.
-
-**Tips:**
-- Take screenshots on a 1280×800 display (or resize the browser window)
-- Use a real Coretax page (with test/sample data, not real taxpayer data)
-- Blur or redact any real NPWP or taxpayer names in screenshots
-- Ensure the amber toolkit buttons are clearly visible against the Coretax UI
+| # | File | Description |
+|---|---|---|
+| 1 | `screenshot/MP Filter.png` | Multi-period picker — toolkit UI with period checkbox grid expanded |
+| 2 | `screenshot/FP Filter.png` | FP number filter — invoice list pasted, grid filtered to matching invoices |
+| 3 | `screenshot/Bulk Credit Period Changer.png` | Bulk credit — controls + "Ubah Masa Kredit" button + progress message |
+| 4 | `screenshot/Bulk Download.png` | Bulk PDF download — navy download button + progress + files in download bar |
+| 5 | `screenshot/Free Plan.png` | Popup — Free tier with toggle ON, code entry, QRIS plan cards |
+| 6 | `screenshot/Pro Plan.png` | Popup — Pro active showing plan, start date, expiry, days remaining |
 
 ## 10. Promotional Images (optional but recommended)
 
@@ -171,7 +162,7 @@ CorePlus is a productivity extension for Indonesian tax professionals using the 
 
 - **Developer name**: [Your name or company]
 - **Website**: https://github.com/AbiMaryam
-- **Support email**: [Your support email — fill in before submitting]
+- **Support email**: eastaxconsulting@gmail.com
 - **Privacy policy URL**: https://abimaryam.github.io/coreplus/privacy.html
 
 Fill these in the CWS dashboard when submitting.
